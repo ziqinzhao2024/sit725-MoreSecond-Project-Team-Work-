@@ -35,7 +35,7 @@
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
+                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#loginModal">
                         <i class="bi-person-circle me-2"></i>
                         Login
                     </button>
@@ -43,6 +43,30 @@
             </div>
         </div>
     </nav>
+    <!-- LoginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">MoreSecond Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-5">
+                    <div class="my-3">
+                        <label for="email" class="form-label mb-1 text-black-80 bi-person-fill">Email:</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="mb-5">
+                        <label for="psw" class="form-label mb-1 text-black-80 bi-lock-fill">Password:</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3" style="width: 100%;">Login</button>
+                    <div class="text-center">Don't have an account yet? <a href="#">Create account</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sideoffcanvas -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">All Categories</h5>
