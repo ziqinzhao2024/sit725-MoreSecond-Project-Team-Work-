@@ -60,8 +60,31 @@
                         <label for="psw" class="form-label mb-1 text-black-80 bi-lock-fill">Password:</label>
                         <input type="password" class="form-control">
                     </div>
-                    <button type="submit" class="btn btn-primary mb-3" style="width: 100%;">Login</button>
-                    <div class="text-center">Don't have an account yet? <a href="#">Create account</a></div>
+                    <button type="submit" class="btn btn-primary mb-4" style="width: 100%;">Login</button>
+                    <div class="text-center mb-4">Don't have an account yet? <a href="#" data-bs-toggle="modal" data-bs-target="#registeModal">Create account</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- RegisterModal -->
+    <div class="modal fade" id="registeModal" tabindex="-1" aria-labelledby="registeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="registeModalLabel">MoreSecond Create account</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-5">
+                    <div class="my-3">
+                        <label for="email" class="form-label mb-1 text-black-80 bi-person-fill">Email:</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="mb-5">
+                        <label for="psw" class="form-label mb-1 text-black-80 bi-lock-fill">Password:</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-4" style="width: 100%;">Sign up</button>
+                    <div class="text-center mb-4">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</a></div>
                 </div>
             </div>
         </div>
