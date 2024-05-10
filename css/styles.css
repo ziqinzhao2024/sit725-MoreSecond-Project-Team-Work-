@@ -1,0 +1,12 @@
+
+.indexBanner{
+  width: 50%; 
+  margin: 0 25%;
+}
+
+.indexBanner .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
