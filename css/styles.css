@@ -22,9 +22,32 @@
   align-items: center;
 }
 
+.loadmore button{
+  padding: 20px 30px;
+  font-size: 20px;
+}
+
 
 /* item.html */
 .profile-card .card-img-top{
   max-width: 100px;
   border-radius: 50% !important
+}
+
+
+/* account.html */
+.account-card .card-img-top{
+  max-width: 150px;
+  border-radius: 50% !important
+}
+
+.navbar li a.active, .navbar li a:hover {
+  border-bottom: 2px solid rgb(239, 153, 34);
+}
+
+.tab-content .row input{
+  height: 55px;
+  border: 1px black solid;
+  padding: 0 20px;
+  width: 85%;
 }
