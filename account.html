@@ -22,11 +22,11 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item mx-2"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link" href="#!">Wearing</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link" href="#!">Electronics</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link" href="#!">Living</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link" href="#!">Luxury</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="shop_Wears.html">Wearing</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="shop_Electronics.html">Electronics</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="shop_Living.html">Living</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="shop_Luxury.html">Luxury</a></li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             All Products
@@ -38,7 +38,7 @@
                     <!-- User info button displayed after login -->
                     <button id="userBtn" type="button" class="btn btn-outline-dark" href="#">
                         <i class="bi-person-circle me-2"></i>
-                        <span id="userId">UserID</span>
+                        <span id="userId">test1</span>
                     </button>
                 </form>
             </div>
@@ -55,18 +55,17 @@
                 <div class="list-group-item list-group-item-action">
                     <div class="input-group">
                         <span class="input-group-text"><i class="bi-search"></i></span>
-                        <input class="form-control" type="text" placeholder="Search categories..." aria-label="Search categories..." aria-describedby="button-search" />
+                        <input class="form-control" type="text" id="categorySearch" placeholder="Search categories..." aria-label="Search categories..." aria-describedby="button-search" />
                     </div>
                 </div>
-                <button type="button" class="list-group-item list-group-item-action">Women's</button>
-                <button type="button" class="list-group-item list-group-item-action">Men's</button>
-                <button type="button" class="list-group-item list-group-item-action">Electronics</button>
-                <button type="button" class="list-group-item list-group-item-action">Books & Stationery</button>
-                <button type="button" class="list-group-item list-group-item-action">Sports</button>
-                <button type="button" class="list-group-item list-group-item-action">Toys & Games</button>
-                <button type="button" class="list-group-item list-group-item-action">Babies & Kids</button>
-                <button type="button" class="list-group-item list-group-item-action">Home & Furniture</button>
-                <button type="button" class="list-group-item list-group-item-action">Outdoors & Gardening</button>
+                <button type="button" class="list-group-item list-group-item-action category">Women's</button>
+                <button type="button" class="list-group-item list-group-item-action category">Men's</button>
+                <button type="button" class="list-group-item list-group-item-action category">Electronics</button>
+                <button type="button" class="list-group-item list-group-item-action category">Home & Furniture</button>
+                <button type="button" class="list-group-item list-group-item-action category">Toys & Games</button>
+                <button type="button" class="list-group-item list-group-item-action category">Babies & Kids</button>
+                <button type="button" class="list-group-item list-group-item-action category">Books & Stationery</button>
+                <button type="button" class="list-group-item list-group-item-action category">Luxury</button>             
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MoreSecond</title>
+    <title>MoreSecond Living</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,10 +22,10 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item mx-2"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Wears.html">Wearing</a></li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Electronics.html">Electronics</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link" href="shop_Living.html">Living</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link active" href="shop_Living.html">Living</a></li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Luxury.html">Luxury</a></li>
                     <li class="nav-item mx-2">
                         <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
@@ -120,121 +120,14 @@
             </div>
         </div>
     </div>
-    <!-- Banner-->
-    <header class="bg-dark py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">More Second</h1>
-                <p class="lead fw-normal text-white-50 mb-0">There're More Second-hand for Everyone</p>
-            </div>
+    <!-- All Items Section-->
+    <section class="py-5" id="itemContent">
+        <div class="container px-4 px-lg-5">
+            <h2>Living Products</h2>
+            <p class="fw-light my-4" id="itemCount"></p>
         </div>
-        <div class="indexBanner">
-            <div class="swiper bannerSwiper" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="assets/img/index_1.jpg" alt="index_pic1"></div>
-                    <div class="swiper-slide"><img src="assets/img/index_2.jpg" alt="index_pic2"></div>
-                    <!-- <div class="swiper-slide"><img src="assets/img/index_3.jpg" alt="index_pic3"></div>
-                    <div class="swiper-slide"><img src="assets/img/index_4.jpg" alt="index_pic4"></div> -->
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-    </header>
-    <!-- Search -->
-    <div class="container mt-5">
-        <form class="d-flex">
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-search"></i></span>
-                <input id="searchInput" class="form-control" type="search" placeholder="Search for anything" aria-label="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-            </div>
-        </form>
-    </div>
-    <!-- Section-->
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/img/img1.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Louis vuitton authentic Greenwich demier ebene bag</h5>
-                                <!-- Product price-->
-                                $1990.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/img/img2.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">I AM GIA Tan Teddy Jacket Size XS</h5>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$45.00</span>
-                                $35.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/img/img3.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Chanel Limited Edition Perspex White Sneakers</h5>
-                                <!-- Product price-->
-                                $50.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/img/img4.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Instax Mini 8 - White</h5>
-                                <!-- Product price-->
-                                $30.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
-                        </div>
-                    </div>
-                </div>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="itemCard">
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
@@ -248,12 +141,31 @@
                                 <h5 class="fw-bolder">Uncommon Squishies!</h5>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through">$15.00</span>
-                                $10.00
+                                <span class="itemPrice">$10.00</span>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="/img/img13.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Motivation book</h5>
+                                <!-- Product price-->
+                                <span class="itemPrice">$5.00</span>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
@@ -267,12 +179,12 @@
                                 <!-- Product name-->
                                 <h5 class="fw-bolder">BNWT Cinnamoroll Sanrio Japanese Collectible Toys</h5>
                                 <!-- Product price-->
-                                $29.00
+                                <span class="itemPrice">$29.00</span>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
@@ -289,42 +201,60 @@
                                 <h5 class="fw-bolder">Queen size wrought iron bed frame & mattress combo</h5>
                                 <!-- Product price-->
                                 <span class="text-muted text-decoration-line-through">$230.00</span>
-                                $128.00
+                                <span class="itemPrice">$128.00</span>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="/img/img12.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">106PCS Cross Stitch Embroidery Thread Hoop Kit Skeins Floss Tools Sewing Set AU</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$50.00</span>
+                                <span class="itemPrice">$35.00</span>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="/img/img8.jpg" alt="..." />
+                        <img class="card-img-top" src="/img/img14.jpg" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">IPhone 13 Pro</h5>
+                                <h5 class="fw-bolder">Easels for sale 150 / 175 cm new</h5>
                                 <!-- Product price-->
-                                $650.00
+                                <span class="itemPrice">$35.00</span>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
-    <div class="row loadmore mb-5">
-        <div class="col-lg-12 text-center">
-            <button type="button" class="btn btn-outline-dark" id="load_btn" onclick="window.location.href = 'shop_All.html';">Shop More</button>
-        </div>
-    </div>
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container"><p class="m-0 text-center text-white">Copyright &copy; MoreSecond 2024</p></div>
@@ -342,38 +272,5 @@
 <script src="js/scripts.js"></script>
 
 <script>
-$(document).ready(function(){
-
-    //  Initialize Swiper 
-    var swiper = new Swiper(".bannerSwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-            dynamicBullets: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-
-    var swiper2 = new Swiper(".oneSwiper", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
-        },
-    });
-});
 </script>
 </html>
