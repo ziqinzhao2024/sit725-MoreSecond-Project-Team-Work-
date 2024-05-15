@@ -91,6 +91,22 @@ button.proceed-to-checkout {
   margin-top: 20px;
 }
 
+.button-primary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555; /* Dark gray color */
+  color: white;
+  cursor: pointer;
+  width: 15%;
+  margin-top: 20px;
+}
+
+/* This will apply to all buttons you want to have the dark gray style */
+.button-primary:hover {
+  background-color: #333; /* Slightly darker on hover */
+}
+
 .navbar .btn {
-  margin-left: 10px; /* Ensures spacing between buttons */
+  margin-left: 10px;
 }

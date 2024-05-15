@@ -38,43 +38,33 @@ var numberOfItem = $('#itemCard').children().length;
 $('#itemCount').text(numberOfItem + ' Items');
 
 /*shopping_cart.html*/
-document.addEventListener('DOMContentLoaded', function() {
-    // Simulated cart array, would normally be fetched or managed dynamically
-    const cart = [];
+function updateCartUI() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = ''; // Clear existing items
+    let subtotal = 0;
 
-    // References to the HTML elements
-    const cartMessage = document.querySelector('.cart-section p');
-    const subtotalSpan = document.querySelector('.subtotal span:nth-child(2)');
-    const totalSpan = document.querySelector('.total span:nth-child(2)');
-    const checkoutButton = document.querySelector('.proceed-to-checkout');
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item');
+        itemElement.innerHTML = `
+            <div class="cart-item-image"><img src="${item.image}" alt="${item.name}"></div>
+            <div class="cart-item-description">
+                <h4>${item.name}</h4>
+                <p>${item.description}</p>
+            </div>
+            <div class="cart-item-quantity">
+                <input type="number" value="${item.quantity}" min="1" class="quantity-input">
+            </div>
+            <div class="cart-item-subtotal">€${(item.price * item.quantity).toFixed(2)}</div>
+        `;
+        cartItemsContainer.appendChild(itemElement);
+        subtotal += item.price * item.quantity;
+    });
 
-    // Function to update the cart UI
-    function updateCartUI() {
-        if (cart.length === 0) {
-            cartMessage.textContent = "Your cart is currently empty.";
-            subtotalSpan.textContent = "€0.00";
-            totalSpan.textContent = "€0.00";
-            checkoutButton.disabled = true;
-        } else {
-            cartMessage.textContent = "Review the items in your cart:";
-            let subtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-            subtotalSpan.textContent = `€${subtotal.toFixed(2)}`;
-            totalSpan.textContent = `€${subtotal.toFixed(2)}`;
-            checkoutButton.disabled = false;
-        }
-    }
+    document.getElementById('subtotal').textContent = `€${subtotal.toFixed(2)}`;
+    document.getElementById('total').textContent = `€${subtotal.toFixed(2)}`; // Update this if needed for shipping
+    document.querySelector('.proceed-to-checkout').disabled = cart.length === 0;
+}
 
-    // Example function to add items to the cart (this would be triggered by actual cart operations)
-    function addItemToCart(item) {
-        cart.push(item);
-        updateCartUI();
-    }
-
-    // Initial update in case there are items when page loads (here, it will be empty initially)
-    updateCartUI();
-
-    // Simulate adding an item to cart, for demonstration
-    // Uncomment the line below to test adding an item
-    // addItemToCart({ name: 'Black Hoodie', price: 70.00, quantity: 1 });
-});
-
+// Example adding item to cart
+addItemToCart({ name: 'Black Hoodie', price: 70.00, quantity: 1, description: 'Comfortable black hoodie', image: 'path/to/image.jpg' });
