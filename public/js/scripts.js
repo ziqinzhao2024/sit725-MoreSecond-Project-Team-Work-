@@ -37,7 +37,7 @@ $("#categorySearch").on("input", function() {
 var numberOfItem = $('#itemCard').children().length;
 $('#itemCount').text(numberOfItem + ' Items');
 
-/*shop_cart.html*/
+/*shopping_cart.html*/
 document.addEventListener('DOMContentLoaded', function() {
     // Simulated cart array, would normally be fetched or managed dynamically
     const cart = [];
