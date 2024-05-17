@@ -111,11 +111,11 @@ button.proceed-to-checkout {
   /* Dark gray color */
   color: white;
   cursor: pointer;
-  width: 5%;
+  width: 15%;
   margin-top: 20px;
 }
 
-.buyNowButton {
+.button-buy-now {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -123,7 +123,7 @@ button.proceed-to-checkout {
   /* Dark gray color */
   color: white;
   cursor: pointer;
-  width: 5%;
+  width: 15%;
   margin-top: 20px;
 }
 
