@@ -27,6 +27,23 @@ function updateCartUI() {
     document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
     document.getElementById('total').textContent = `$${subtotal.toFixed(2)}`; // Update this if needed for shipping
     document.querySelector('.proceed-to-checkout').disabled = cart.length === 0;
+
+    // Add event listeners to remove buttons
+    const removeButtons = document.querySelectorAll('.remove-item-button');
+    removeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const itemId = parseInt(this.getAttribute('data-id'));
+            removeItemFromCart(itemId);
+        });
+    });
+}
+
+// Function to remove an item from the cart
+function removeItemFromCart(itemId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(item => item.id !== itemId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartUI();
 }
 
 // Call updateCartUI on page load to display cart items
