@@ -1,7 +1,6 @@
-
 /* index.html */
-.indexBanner{
-  width: 50%; 
+.indexBanner {
+  width: 50%;
   margin: 0 25%;
 }
 
@@ -12,40 +11,41 @@
   object-fit: cover;
 }
 
-.offcanvas .offcanvas-body{
+.offcanvas .offcanvas-body {
   padding: 0;
 }
 
-.offcanvas .offcanvas-body .list-group-item{
+.offcanvas .offcanvas-body .list-group-item {
   border-radius: 0;
   padding: 20px 25px;
   align-items: center;
 }
 
-.loadmore button{
+.loadmore button {
   padding: 20px 30px;
   font-size: 20px;
 }
 
 
 /* item.html */
-.profile-card .card-img-top{
+.profile-card .card-img-top {
   max-width: 100px;
   border-radius: 50% !important
 }
 
 
 /* account.html */
-.account-card .card-img-top{
+.account-card .card-img-top {
   max-width: 150px;
   border-radius: 50% !important
 }
 
-.navbar li a.active, .navbar li a:hover {
+.navbar li a.active,
+.navbar li a:hover {
   border-bottom: 2px solid rgb(239, 153, 34);
 }
 
-.tab-content .row input{
+.tab-content .row input {
   height: 55px;
   border: 1px black solid;
   padding: 0 20px;
@@ -95,16 +95,42 @@ button.proceed-to-checkout {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #555; /* Dark gray color */
+  background-color: #555;
+  /* Dark gray color */
   color: white;
   cursor: pointer;
   width: 15%;
   margin-top: 20px;
 }
 
+.remove-item-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  /* Dark gray color */
+  color: white;
+  cursor: pointer;
+  width: 5%;
+  margin-top: 20px;
+}
+
+.buyNowButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  /* Dark gray color */
+  color: white;
+  cursor: pointer;
+  width: 5%;
+  margin-top: 20px;
+}
+
 /* This will apply to all buttons you want to have the dark gray style */
 .button-primary:hover {
-  background-color: #333; /* Slightly darker on hover */
+  background-color: #333;
+  /* Slightly darker on hover */
 }
 
 .navbar .btn {
