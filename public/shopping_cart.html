@@ -152,27 +152,28 @@
         <h2>Cart Totals</h2>
         <div class="subtotal">
             <span>Subtotal</span>
-            <span>$0.00</span>
+            <span id="subtotal">$0.00</span>
         </div>
         <div class="shipping">
             <span>Shipping</span>
-            <span>$0.00</span>
+            <span id="shipping">$0.00</span>
         </div>
         <div class="total">
             <span>Total</span>
-            <span>$0.00</span>
+            <span id="total">$0.00</span>
         </div>
         <div class="cart-controls">
             <input type="text" placeholder="Coupon code">
-            <button onclick="applyCoupon()"class="button-primary">Apply coupon</button>
-            <button onclick="updateCart()"class="button-primary">Update cart</button>
+            <button onclick="applyCoupon()" class="button-primary">Apply coupon</button>
+            <button onclick="updateCart()" class="button-primary">Update cart</button>
         </div>
         <button class="proceed-to-checkout" disabled>Proceed to Checkout</button>
     </div>
- 
+
 </body>
 <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="assets/swiper/swiper-bundle.js"></script>
 <script src="js/scripts.js"></script>
+<script src="js/shopping_cart.js"></script>
 
 </html>
