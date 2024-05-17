@@ -19,6 +19,7 @@ function updateCartUI() {
                 <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}">
             </div>
             <div class="cart-item-subtotal">$${(item.price * item.quantity).toFixed(2)}</div>
+            <button class="remove-item-button" data-id="${item.id}">Remove</button>
         `;
         cartItemsContainer.appendChild(itemElement);
         subtotal += item.price * item.quantity;
@@ -31,13 +32,12 @@ function updateCartUI() {
     // Add event listeners to remove buttons
     const removeButtons = document.querySelectorAll('.remove-item-button');
     removeButtons.forEach(button => {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function() {
             const itemId = parseInt(this.getAttribute('data-id'));
             removeItemFromCart(itemId);
         });
     });
 }
-
 // Function to remove an item from the cart
 function removeItemFromCart(itemId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
