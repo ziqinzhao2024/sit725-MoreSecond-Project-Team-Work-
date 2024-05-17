@@ -32,7 +32,7 @@ function updateCartUI() {
     // Add event listeners to remove buttons
     const removeButtons = document.querySelectorAll('.remove-item-button');
     removeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const itemId = parseInt(this.getAttribute('data-id'));
             removeItemFromCart(itemId);
         });
