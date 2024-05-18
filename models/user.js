@@ -2,8 +2,8 @@ let client = require('../dbConnection');
 
 let collection = client.db("MoreSecond").collection('User');
 
-function postUser(user, callback) {
-    collection.insertOne(user, (err, result) => {
+async function postUser(user, callback) {
+    await collection.insertOne(user, (err, result) => {
         if (!err) {
             callback(null, result);
         } else {
@@ -12,8 +12,8 @@ function postUser(user, callback) {
     });
 }
 
-function putUser(id, updateRecord, callback) {
-    collection.updateOne({ _id: id }, { $set: updateRecord }, (err, result) => {
+async function putUser(id, updateRecord, callback) {
+    await collection.updateOne({ _id: id }, { $set: updateRecord }, (err, result) => {
         if (!err) {
             callback(null, result);
         } else {
@@ -22,8 +22,8 @@ function putUser(id, updateRecord, callback) {
     });
 }
 
-function getAllUsers(callback) {
-    collection.find({}).toArray((err, result) => {
+async function getAllUsers(callback) {
+    await collection.find({}).toArray((err, result) => {
         if (!err) {
             callback(null, result);
         } else {
@@ -32,8 +32,9 @@ function getAllUsers(callback) {
     });
 }
 
-function getUsersById(id, callback) {
-    collection.find({ _id: id }).toArray((err, result) => {
+async function getUsersById(id, callback) {
+    console.log(await collection.findOne({}))
+    await collection.findOne({_id: id}, (err, result) => {
         if (!err) {
             callback(null, result);
         } else {
@@ -42,8 +43,8 @@ function getUsersById(id, callback) {
     });
 }
 
-function deleteUser(id, callback) {
-    collection.deleteOne({ _id: id }, (err, result) => {
+async function deleteUser(id, callback) {
+    await collection.deleteOne({ _id: id }, (err, result) => {
         if (!err) {
             callback(null, result);
         } else {

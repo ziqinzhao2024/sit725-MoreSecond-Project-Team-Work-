@@ -29,11 +29,11 @@ router.delete('/items/:id', (req, res) => {
 });
 
 router.post('/users', (req, res) => {
-    item_controller.postUser(req, res);
+    user_controller.postUser(req, res);
 });
 
 router.get('/users', (req, res) => {
-    user_controller.getAllUsers(req, res);
+   user_controller.getAllUsers(req, res);
 });
 
 router.get('/users/:id', (req, res) => {
