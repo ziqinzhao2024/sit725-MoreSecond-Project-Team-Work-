@@ -4,7 +4,7 @@ const postItem = (req, res) => {
     let item = req.body
     collection.postItem(item, (err, result) => {
         if (!err) {
-            res.json({ statusCode: 200, data: result, message: 'post item success' });
+            res.json({ statusCode: 201, data: result, message: 'post item success' });
         }
     });
 }

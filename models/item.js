@@ -1,5 +1,5 @@
 let client = require('../dbConnection');
-
+const { ObjectId } = require('mongodb');
 let collection = client.db("MoreSecond").collection('Item');
 
 function postItem(item, callback) {
@@ -13,7 +13,7 @@ function postItem(item, callback) {
 }
 
 function putItem(id, updateRecord, callback) {
-    collection.updateOne({ _id: id }, { $set: updateRecord }, (err, result) => {
+    collection.updateOne({ _id: ObjectId(id) }, { $set: updateRecord }, (err, result) => {
         if (!err) {
             callback(null, result);
         } else {
@@ -43,7 +43,7 @@ function getItemsByCategory(category, callback) {
 }
 
 function getItemsById(id, callback) {
-    collection.find({ _id: id }).toArray((err, result) => {
+    collection.find({ _id: ObjectId(id) }).toArray((err, result) => {
         if (!err) {
             callback(null, result);
         } else {
@@ -53,7 +53,7 @@ function getItemsById(id, callback) {
 }
 
 function deleteItem(id, callback) {
-    collection.deleteOne({ _id: id }, (err, result) => {
+    collection.deleteOne({ _id: new ObjectId(id) }, (err, result) => {
         if (!err) {
             callback(null, result);
         } else {
