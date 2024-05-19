@@ -1,6 +1,6 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
-const uri = "mongodb://localhost:27017";
+const uri = "mongodb+srv://huazhao9824:WRYS0Mu3UrajvKFA@cluster0.tip0dat.mongodb.net/?retryWrites=true&w=majority&appName=cluster0";
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,
@@ -13,7 +13,7 @@ const client = new MongoClient(uri, {
 async function connectToMongo() {
     try {
         await client.connect();
-        let collection = client.db("MoreSecond").collection('User');
+        client.db("MoreSecond").collection('User');
         // console.log(await collection.findOne({}));
         console.log('Connected successfully to MongoDB');
     } catch (error) {
