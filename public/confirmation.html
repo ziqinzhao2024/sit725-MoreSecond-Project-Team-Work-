@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Face-to-Face Checkout</title>
+    <title>Order Confirmation</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,7 @@
     <link href="assets/swiper/swiper-bundle.css" rel="stylesheet">
     <link href="assets/bootstrap/icons/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -139,50 +140,20 @@
             </div>
         </div>
     </div>
-    <!-- Face-to-face Chekcout page -->
-    <h1>Face-to-Face Checkout</h1>
-    <div id="checkout-items">
-        <!-- Checkout items will be dynamically added here -->
-    </div>
-    <div class="checkout-details">
-        <h2>Meeting Details</h2>
-        <form id="meeting-form">
-            <label for="meetingPlace">Meeting Place:</label>
-            <input type="text" id="meetingPlace" name="meetingPlace" required>
-            <br>
-            <label for="meetingTime">Meeting Time:</label>
-            <input type="datetime-local" id="meetingTime" name="meetingTime" required>
-            <br>
-            <h2>Payment Method</h2>
-            <label for="payment-method">Choose a payment method:</label>
-            <select id="payment-method" name="payment-method" required>
-                <option value="cash">Cash</option>
-                <option value="credit-card">Credit Card</option>
-                <option value="paypal">PayPal</option>
-            </select>
-            <br>
-            <!-- Credit Card Fields -->
-            <div id="credit-card-fields" style="display: none;">
-                <label for="cc-name">Name on Card:</label>
-                <input type="text" id="cc-name" name="cc-name">
-                <br>
-                <label for="cc-number">Card Number:</label>
-                <input type="text" id="cc-number" name="cc-number">
-                <br>
-                <label for="cc-expiry">Expiry Date:</label>
-                <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY">
-                <br>
-                <label for="cc-cvc">CVC:</label>
-                <input type="text" id="cc-cvc" name="cc-cvc">
-                <br>
+    <div class="container">
+        <h1>Order Confirmation</h1>
+        <div id="confirmation-details" class="confirmation-details">
+            <h2>Thank you for your order!</h2>
+            <p>Your order has been placed successfully. Here are your order details:</p>
+            <div id="order-summary">
+                <!-- Order details will be dynamically added here -->
             </div>
-            <button type="submit" class="button-primary">Confirm Meeting</button>
-        </form>
+            <button onclick="window.location.href='index.html'" class="return-to-home">Return to Home</button>
+        </div>
     </div>
-
     <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="assets/swiper/swiper-bundle.js"></script>
-    <script src="js/checkout_face_to_face.js"></script>
+    <script src="js/confirmation.js"></script>
 </body>
 
 </html>

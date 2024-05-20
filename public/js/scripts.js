@@ -36,10 +36,13 @@ var numberOfItem = $('#itemCard').children().length;
 $('#itemCount').text(numberOfItem + ' Items');
 
 /*shopping_cart.html*/
-function updateCartUI() {
+function updateGeneralCartUI() {
     const cartItemsContainer = document.getElementById('cart-items');
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
     cartItemsContainer.innerHTML = ''; // Clear existing items
     let subtotal = 0;
+
+    console.log("Cart items:", cart);
 
     cart.forEach(item => {
         const itemElement = document.createElement('div');
@@ -61,8 +64,11 @@ function updateCartUI() {
 
     document.getElementById('subtotal').textContent = `€${subtotal.toFixed(2)}`;
     document.getElementById('total').textContent = `€${subtotal.toFixed(2)}`; // Update this if needed for shipping
-    document.querySelector('.proceed-to-checkout').disabled = cart.length === 0;
+    const proceedToCheckoutButton = document.querySelector('.proceed-to-checkout');
+    if (proceedToCheckoutButton) {
+        proceedToCheckoutButton.disabled = cart.length === 0;
+    }
 }
 
-// Example adding item to cart
-addItemToCart({ name: 'Black Hoodie', price: 70.00, quantity: 1, description: 'Comfortable black hoodie', image: 'path/to/image.jpg' });
+// Call the function to update the cart UI on document load, if needed globally
+document.addEventListener('DOMContentLoaded', updateGeneralCartUI);
