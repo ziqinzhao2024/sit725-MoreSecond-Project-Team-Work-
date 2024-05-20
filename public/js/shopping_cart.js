@@ -34,8 +34,9 @@ function updateCartUI() {
     // Add event listeners to remove buttons
     const removeButtons = document.querySelectorAll('.remove-item-button');
     removeButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const itemId = parseInt(this.getAttribute('data-id'));
+            console.log("Removing item with ID:", itemId);
             removeItemFromCart(itemId);
         });
     });
@@ -47,26 +48,34 @@ function removeItemFromCart(itemId) {
     // Use filter to remove only the item with the matching ID
     cart = cart.filter(item => item.id !== itemId);
     localStorage.setItem('cart', JSON.stringify(cart));
+    console.log("Updated cart after removal:", cart);
     updateCartUI();
+}
+
+// Function to handle the checkout option selection
+function handleCheckoutOptionSelection() {
+    const proceedToCheckoutButton = document.getElementById('proceedToCheckout');
+    const checkoutOptions = document.querySelectorAll('input[name="checkoutOption"]');
+    checkoutOptions.forEach(option => {
+        option.addEventListener('change', function () {
+            proceedToCheckoutButton.disabled = !this.checked;
+        });
+    });
+}
+
+// Function to proceed to the appropriate checkout page
+function proceedToCheckout() {
+    const selectedOption = document.querySelector('input[name="checkoutOption"]:checked').value;
+    if (selectedOption === 'faceToFace') {
+        window.location.href = 'checkout_face_to_face.html';
+    } else if (selectedOption === 'shipping') {
+        window.location.href = 'checkout_shipping.html';
+    }
 }
 
 // Call updateCartUI on page load to display cart items
-document.addEventListener('DOMContentLoaded', updateCartUI);
-
-// Example function to apply a coupon
-function applyCoupon() {
-    // Logic to apply coupon
-}
-
-// Example function to update the cart
-function updateCart() {
-    // Logic to update the cart
-}
-
-// Example adding item to cart (remove this after testing)
-function addItemToCart(item) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(item);
-    localStorage.setItem('cart', JSON.stringify(cart));
+document.addEventListener('DOMContentLoaded', function () {
     updateCartUI();
-}
+    handleCheckoutOptionSelection();
+    document.getElementById('proceedToCheckout').addEventListener('click', proceedToCheckout);
+});
