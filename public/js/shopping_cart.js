@@ -1,3 +1,5 @@
+// Specific functions related to the shopping cart page
+
 // Function to update the cart UI
 function updateCartUI() {
     const cartItemsContainer = document.getElementById('cart-items');
@@ -11,7 +13,7 @@ function updateCartUI() {
         const itemElement = document.createElement('div');
         itemElement.classList.add('cart-item');
         itemElement.innerHTML = `
-            <div class="cart-item-image"><img src="${item.image}" alt="${item.name}"></div>
+            <div class="cart-item-image"><img src="${item.image}" alt="${item.name}" class="cart-image"></div>
             <div class="cart-item-description">
                 <h4>${item.name}</h4>
                 <p>${item.description}</p>
@@ -29,7 +31,10 @@ function updateCartUI() {
 
     document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
     document.getElementById('total').textContent = `$${subtotal.toFixed(2)}`; // Update this if needed for shipping
-    document.querySelector('.proceed-to-checkout').disabled = cart.length === 0;
+    const proceedToCheckoutButton = document.querySelector('.proceed-to-checkout');
+    if (proceedToCheckoutButton) {
+        proceedToCheckoutButton.disabled = cart.length === 0;
+    }
 
     // Add event listeners to remove buttons
     const removeButtons = document.querySelectorAll('.remove-item-button');
@@ -58,7 +63,7 @@ function handleCheckoutOptionSelection() {
     const checkoutOptions = document.querySelectorAll('input[name="checkoutOption"]');
     checkoutOptions.forEach(option => {
         option.addEventListener('change', function () {
-            proceedToCheckoutButton.disabled = !this.checked;
+            proceedToCheckoutButton.disabled = false;
         });
     });
 }

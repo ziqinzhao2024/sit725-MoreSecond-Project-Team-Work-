@@ -165,6 +165,29 @@
             <label for="country">Country:</label>
             <input type="text" id="country" name="country" required>
             <br>
+            <h2>Payment Method</h2>
+            <label for="payment-method">Choose a payment method:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            </select>
+            <br>
+            <!-- Credit Card Fields -->
+            <div id="credit-card-fields" style="display: none;">
+                <label for="cc-name">Name on Card:</label>
+                <input type="text" id="cc-name" name="cc-name">
+                <br>
+                <label for="cc-number">Card Number:</label>
+                <input type="text" id="cc-number" name="cc-number">
+                <br>
+                <label for="cc-expiry">Expiry Date:</label>
+                <input type="text" id="cc-expiry" name="cc-expiry" placeholder="MM/YY">
+                <br>
+                <label for="cc-cvc">CVC:</label>
+                <input type="text" id="cc-cvc" name="cc-cvc">
+                <br>
+            </div>
             <button type="submit" class="button-primary">Confirm Purchase</button>
         </form>
     </div>
