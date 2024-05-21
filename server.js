@@ -35,6 +35,12 @@ app.use('/api/items', itemRoutes);
 const userRoutes = require('./routers/userRoutes')(db);
 app.use('/api/users', userRoutes);
 
+const orderRoutes = require('./routers/orderRoutes')(db);
+app.use('/api/orders', orderRoutes);
+
+const cartRoutes = require('./routers/cartRoutes')(db);
+app.use('/api/carts', cartRoutes);
+
 app.get('/', (req, res) => {
     res.render('index.html');
 });
