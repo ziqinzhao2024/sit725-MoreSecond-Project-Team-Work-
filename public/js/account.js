@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let url = "http://localhost:8080"
+    let url = "http://localhost:9999"
     function fetchFun(url, method, data) {
         if (data == "") {
             return new Promise((resolve, reject) => {
@@ -102,7 +102,7 @@ $(document).ready(function () {
 
 
 
-    // $(".touxiang").attr("src", "http://localhost:8080/img/"+);
+    // $(".touxiang").attr("src", "http://localhost:9999/img/"+);
 
 
     $("#firstname").val(userInfo.first_name)
