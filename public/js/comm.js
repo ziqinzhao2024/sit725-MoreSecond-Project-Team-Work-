@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let url = "http://120.76.228.121:8080"
+    let url = "http://localhost:8080"
     function fetchFun(url, method, data) {
         if (data == "") {
             return new Promise((resolve, reject) => {

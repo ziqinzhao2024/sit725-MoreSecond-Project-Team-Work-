@@ -1,4 +1,5 @@
 var express = require("express")
+const cors=require('cors')
 const { MongoClient, ServerApiVersion } = require('mongodb');
 var ejs = require('ejs')
 var app = express()
@@ -19,6 +20,7 @@ client.connect()
 
 const db = client.db(dbName);
 
+app.use(cors())
 app.set('views','./public');
 app.engine('html',ejs.__express);
 app.set('view engine', 'html');
@@ -27,7 +29,7 @@ app.set('view engine', 'html');
 app.use(express.static(__dirname + '/public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-  
+
 // Routes
 const itemRoutes = require('./routers/itemRoutes')(db);
 app.use('/api/items', itemRoutes);
@@ -41,11 +43,17 @@ app.use('/api/orders', orderRoutes);
 const cartRoutes = require('./routers/cartRoutes')(db);
 app.use('/api/carts', cartRoutes);
 
+const registryRoutes = require('./routers/registryRoutes')(db);
+app.use('/api/registry',registryRoutes)
+
+const loginRoutes = require('./routers/loginRoutes')(db);
+app.use('/api/login',loginRoutes)
+
 app.get('/', (req, res) => {
     res.render('index.html');
 });
   
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
       console.log(`Server is running on port ${PORT}`);
 });

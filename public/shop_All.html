@@ -511,20 +511,17 @@ $(document).ready(function(){
 
     $(".card-footer a").click(function(){
 
-        console.log("hello");
-        // 获取产品数据
+        // get product data
         var productName = $(this).closest(".card").find("h5").text();
         var productImg = $(this).closest(".card").find(".card-img-top").attr("src");
         var productPrice = $(this).closest(".card").find(".card-body .text-center .itemPrice").text().trim();
-        
-        console.log("hii");
-        // 构建URL参数字符串
+    
         var queryParams = "?name=" + encodeURIComponent(productName) +
                         "&img=" + encodeURIComponent(productImg) +
                         "&price=" + encodeURIComponent(productPrice);
         
         console.log(queryParams);
-        // 跳转到itemDetail.html页面并附加URL参数
+
         window.location.href = "item.html" + queryParams;
     });
 

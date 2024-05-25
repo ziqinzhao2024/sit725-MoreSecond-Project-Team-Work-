@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let url = "http://120.76.228.121:8080"
+    let url = "http://localhost:8080"
     function fetchFun(url, method, data) {
         if (data == "") {
             return new Promise((resolve, reject) => {
@@ -16,7 +16,7 @@ $(document).ready(function () {
                     // body: JSON.stringify(data)
                 })
                     .then(response => {
-                        console.log(111, response)
+                        
                         if (response.ok) {
                             response.json().then(jsonResponse => {
                                 resolve(jsonResponse)
@@ -54,7 +54,7 @@ $(document).ready(function () {
                     body: JSON.stringify(data)
                 })
                     .then(response => {
-                        console.log(111, response)
+                        
                         if (response.ok) {
                             response.json().then(jsonResponse => {
                                 resolve(jsonResponse)
@@ -102,14 +102,14 @@ $(document).ready(function () {
 
 
 
-    // $(".touxiang").attr("src", "http://120.76.228.121:8080/img/"+);
+    // $(".touxiang").attr("src", "http://localhost:8080/img/"+);
 
 
     $("#firstname").val(userInfo.first_name)
     $("#lastname").val(userInfo.last_name)
     $("#phone_number").val(userInfo.phone_number)
 
-    //用户信息更新
+    //User info update
     $(".updateInfo").click(() => {
 
 
@@ -165,10 +165,10 @@ $(document).ready(function () {
     })
 
 
-    //获取订单
+    //Get order info
     // /api/orders?user_id=664b61b1eb6e683c76c539bd&page_no=1&page_size=10
     fetchFun(url + "/api/orders/condition/" + userInfo._id + "?page_no=1&page_size=10", "GET", "").then(res => {
-        console.log("订单数据", res)
+        console.log("order", res)
 
   
         let arr =  res
@@ -178,7 +178,7 @@ $(document).ready(function () {
             <th>item_name</th>
             <th>actual_price</th>
             <th>quantity</th>
-            <th>money</th>
+            <th>original_price</th>
           </tr>
         </thead>
        `
@@ -186,7 +186,7 @@ $(document).ready(function () {
             let item = arr[i];
             str += `<tbody>
                         <tr>
-                            <td>${item.name}</td>
+                            <td>${item.item_name}</td>
                             <td>${item.actual_price}</td>
                             <td>1</td>
                             <td>$${item.original_price}</td>

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let url = "http://120.76.228.121:8080"
+    let url = "http://localhost:8080"
     function fetchFun(url, method, data) {
         if (data == "") {
             return new Promise((resolve, reject) => {
@@ -105,7 +105,7 @@ $(document).ready(function () {
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="http://120.76.228.121:8080/img/${item.pic}" alt="..." />
+                        <img class="card-img-top" src="http://localhost:8080/img/${item.pic}" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">

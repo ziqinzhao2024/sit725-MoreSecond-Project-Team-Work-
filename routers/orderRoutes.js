@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = (db) => {
-  const orderController = require('../controllers/orderController')(db);
+  const OrderController = require('../controllers/orderController')(db);
   
-  router.get('/', orderController.getAllOrders);
   router.post('/', orderController.createOrder);
-  router.get('/:id', orderController.getOrderById);
   router.put('/:id', orderController.updateOrder);
+  router.get('/:id', orderController.getOrderById);
+  router.get('/', orderController.getAllOrders);
+  router.get('/condition/:user_id', orderController.getOrderByCondition);
   router.delete('/:id', orderController.deleteOrder);
 
   return router;
