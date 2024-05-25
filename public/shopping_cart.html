@@ -15,7 +15,6 @@
     <link href="assets/swiper/swiper-bundle.css" rel="stylesheet">
     <link href="assets/bootstrap/icons/bootstrap-icons-1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -34,13 +33,13 @@
                     </li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Living.html">Living</a></li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Luxury.html">Luxury</a></li>
-                    <li class="nav-item mx-2">
+                    <!-- <li class="nav-item mx-2">
                         <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                             aria-controls="offcanvasRight">
                             All Products
                             <i class="bi-arrow-right-circle-fill me-2"></i>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
                 <form class="d-flex">
                     <!-- User info button displayed after login -->
@@ -65,8 +64,8 @@
             </div>
         </div>
     </nav>
-    <!-- LoginModal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+     <!-- LoginModal -->
+     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -76,13 +75,13 @@
                 <div class="modal-body px-5">
                     <form class="my-3">
                         <label for="email" class="form-label mb-1 text-black-80 bi-person-fill">Email:</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control EmailLogin">
                     </form>
                     <form class="mb-5">
                         <label for="psw" class="form-label mb-1 text-black-80 bi-lock-fill">Password:</label>
-                        <input type="password" class="form-control">
+                        <input type="password" class="form-control PasswordLogin">
                     </form>
-                    <button type="submit" class="btn btn-primary mb-4" style="width: 100%;">Login</button>
+                    <button type="submit" class="btn btn-primary mb-4 Login" style="width: 100%;">Login</button>
                     <div class="text-center mb-4">Don't have an account yet? <a href="#" data-bs-toggle="modal"
                             data-bs-target="#registeModal">Create account</a></div>
                 </div>
@@ -99,14 +98,34 @@
                 </div>
                 <div class="modal-body px-5">
                     <form class="my-3">
+                        <label for="name" class="form-label mb-1 text-black-80 bi-person-fill">firstName:</label>
+                        <input type="text" class="form-control firstNameSignUp">
+                    </form>
+                    <form class="my-3">
+                        <label for="name" class="form-label mb-1 text-black-80 bi-person-fill">lastName:</label>
+                        <input type="text" class="form-control lastNameSignUp">
+                    </form>
+                    <form class="my-3">
+                        <label for="name" class="form-label mb-1 text-black-80 bi-person-fill">Name:</label>
+                        <input type="text" class="form-control NameSignUp">
+                    </form>
+                    <form class="my-3">
+                        <label for="phoneNumber"
+                            class="form-label mb-1 text-black-80 bi-person-fill">phoneNumber:</label>
+                        <input type="text" class="form-control phoneNumberSignUp">
+                    </form>
+
+                    <form class="my-3">
                         <label for="email" class="form-label mb-1 text-black-80 bi-person-fill">Email:</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control EmailSignUp">
                     </form>
                     <form class="mb-5">
                         <label for="psw" class="form-label mb-1 text-black-80 bi-lock-fill">Password:</label>
-                        <input type="password" class="form-control">
+                        <input type="password" class="form-control EmailPassword" id="password">
                     </form>
-                    <button type="submit" class="btn btn-primary mb-4" style="width: 100%;">Sign up</button>
+
+                    <button type="submit" class="btn btn-primary mb-4 signUp" style="width: 100%;">Sign
+                        up</button>
                     <div class="text-center mb-4">Already have an account? <a href="#" data-bs-toggle="modal"
                             data-bs-target="#loginModal">Log in</a></div>
                 </div>
@@ -150,7 +169,10 @@
     </div>
     <!-- Cart Totals Section -->
     <div class="cart-totals">
-        <h2>Cart Totals</h2>
+        <div class="card">
+
+        </div>
+        <!-- <h2>Cart Totals</h2>
         <div class="subtotal">
             <span>Subtotal</span>
             <span id="subtotal">$0.00</span>
@@ -163,19 +185,21 @@
             <span>Total</span>
             <span id="total">$0.00</span>
         </div>
-        <div class="checkout-options">
-            <input type="radio" id="faceToFace" name="checkoutOption" value="faceToFace">
-            <label for="faceToFace">Face-to-Face</label><br>
-            <input type="radio" id="shipping" name="checkoutOption" value="shipping">
-            <label for="shipping">Shipping</label><br>
-        </div>
-        <button id="proceedToCheckout" class="proceed-to-checkout" disabled>Proceed to Checkout</button>
+        <div class="cart-controls">
+            <input type="text" placeholder="Coupon code">
+            <button onclick="applyCoupon()" class="button-primary">Apply coupon</button>
+            <button onclick="updateCart()" class="button-primary">Update cart</button>
+        </div> -->
+        <button class="proceedToCheckout">Proceed to Checkout</button>
     </div>
+    
 
 </body>
+<script src="js/jquery-3.6.0.min.js "></script>
 <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="assets/swiper/swiper-bundle.js"></script>
 <script src="js/scripts.js"></script>
+
 <script src="js/shopping_cart.js"></script>
 
 </html>

@@ -27,12 +27,12 @@
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Electronics.html">Electronics</a></li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Living.html">Living</a></li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Luxury.html">Luxury</a></li>
-                    <li class="nav-item mx-2">
+                    <!-- <li class="nav-item mx-2">
                         <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             All Products
                             <i class="bi-arrow-right-circle-fill me-2"></i>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
                 <form class="d-flex">
                     <!-- User info button displayed after login -->
@@ -79,9 +79,9 @@
         <div class="container px-4 px-lg-5 py-5 bg-dark">
             <div class="row text-white ">
                 <div class="col-7 account-card row mt-5">
-                    <div class="col-4 p-0 ps-5"><img class="card-img-top mt-5" src="img/profile-img.jpg" alt="..." /></div>
+                    <div class="col-4 p-0 ps-5"><img class="card-img-top mt-5 touxiang" src="img/profile-img.jpg" alt="..." /></div>
                     <div class="col-6 ms-2">
-                        <h3 class="pt-5 mt-5">Kevin Anderson</h3>
+                        <h3 class="pt-5 mt-5 name" >Kevin Anderson</h3>
                         <h5>Share something about yourself!</h5>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                     <p class="fs-5 mb-5">Update your personal information.</p>
                     <div>
                         <p class="fs-5">Login email:</p>
-                        <p>reta1iate@hotmail.com</p>
+                        <p class="loginEmail">reta1iate@hotmail.com</p>
                         <p class="fs-5 link-danger">Your login email can't be changed.</p>
                     </div>
                     <div class="row my-4">
@@ -126,13 +126,13 @@
                     <div class="row my-4">
                         <div class="col-md-6">
                             <label for="userphonenumber" class="form-label fs-5">Phone number:</label>
-                            <input type="number" class="form-control" name="userphonenumber" id="userphonenumber" placeholder="Please input your phone number (10 digits)">
+                            <input type="number" class="form-control" name="userphonenumber" id="phone_number" placeholder="Please input your phone number (10 digits)">
                         </div>
                     </div>
                     <div class="row">
                         <div class="d-flex flex-row-reverse px-lg-5">
-                            <button class="btn btn-dark mt-4 fs-5 ms-4" type="button">Update Info</button>
-                            <button class="btn btn-outline-dark mt-4 fs-5" type="button">Discard</button>
+                            <button class="btn btn-dark mt-4 fs-5 ms-4 updateInfo" type="button">Update Info</button>
+                            <button class="btn btn-outline-dark mt-4 fs-5 logOut" type="button" >log out </button>
                         </div>
                     </div>
                 </div>
@@ -142,10 +142,18 @@
                     <p class="fs-5 mb-5">View your order history or check the status of a recent order.</p>
                     <hr>
                     <div class="row">
-                        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 400px;">
+                        <!--  <div class="d-flex flex-column justify-content-center align-items-center" style="height: 400px;">
                             <p class="text-center mb-5 fs-4 fw-light">You haven't placed any orders yet.</p>
                             <a class="text-center text-black" href="index.html">Start Browsing</a>
-                        </div>
+                        </div>-->
+
+                        <!-- <div class="d-flex flex-column " style="height: 400px;">
+                            <div>名称</div>
+                            <div>名称</div>
+                        </div> -->
+                        <div class="container py-4 commodity">
+                           
+                          </div>
                         
                     </div>
                     <hr>
@@ -160,12 +168,14 @@
         <p class="m-0 text-center text-white mb-2">Tel: 123-456-7890</p>
     </footer>
 </body>
-
+<script src="js/jquery-3.6.0.min.js"></script>
 <!-- Vendor JS Files -->
 <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="assets/swiper/swiper-bundle.js"></script>
 <!-- Own JS-->
-<script src="js/scripts.js"></script>
+<!-- <script src="js/scripts.js"></script> -->
+
+<script src="js/account.js"></script>
 
 <script>
 </script>

@@ -27,12 +27,12 @@
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Electronics.html">Electronics</a></li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Living.html">Living</a></li>
                     <li class="nav-item mx-2"><a class="nav-link" href="shop_Luxury.html">Luxury</a></li>
-                    <li class="nav-item mx-2">
+                    <!-- <li class="nav-item mx-2">
                         <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             All Products
                             <i class="bi-arrow-right-circle-fill me-2"></i>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
                 <form class="d-flex">
                     <!-- User info button displayed after login -->
@@ -65,14 +65,15 @@
                 <div class="modal-body px-5">
                     <form class="my-3">
                         <label for="email" class="form-label mb-1 text-black-80 bi-person-fill">Email:</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control EmailLogin">
                     </form>
                     <form class="mb-5">
                         <label for="psw" class="form-label mb-1 text-black-80 bi-lock-fill">Password:</label>
-                        <input type="password" class="form-control">
+                        <input type="password" class="form-control PasswordLogin">
                     </form>
-                    <button type="submit" class="btn btn-primary mb-4" style="width: 100%;">Login</button>
-                    <div class="text-center mb-4">Don't have an account yet? <a href="#" data-bs-toggle="modal" data-bs-target="#registeModal">Create account</a></div>
+                    <button type="submit" class="btn btn-primary mb-4 Login" style="width: 100%;">Login</button>
+                    <div class="text-center mb-4">Don't have an account yet? <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#registeModal">Create account</a></div>
                 </div>
             </div>
         </div>
@@ -87,15 +88,36 @@
                 </div>
                 <div class="modal-body px-5">
                     <form class="my-3">
+                        <label for="name" class="form-label mb-1 text-black-80 bi-person-fill">firstName:</label>
+                        <input type="text" class="form-control firstNameSignUp">
+                    </form>
+                    <form class="my-3">
+                        <label for="name" class="form-label mb-1 text-black-80 bi-person-fill">lastName:</label>
+                        <input type="text" class="form-control lastNameSignUp">
+                    </form>
+                    <form class="my-3">
+                        <label for="name" class="form-label mb-1 text-black-80 bi-person-fill">Name:</label>
+                        <input type="text" class="form-control NameSignUp">
+                    </form>
+                    <form class="my-3">
+                        <label for="phoneNumber"
+                            class="form-label mb-1 text-black-80 bi-person-fill">phoneNumber:</label>
+                        <input type="text" class="form-control phoneNumberSignUp">
+                    </form>
+
+                    <form class="my-3">
                         <label for="email" class="form-label mb-1 text-black-80 bi-person-fill">Email:</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control EmailSignUp">
                     </form>
                     <form class="mb-5">
                         <label for="psw" class="form-label mb-1 text-black-80 bi-lock-fill">Password:</label>
-                        <input type="password" class="form-control">
+                        <input type="password" class="form-control EmailPassword" id="password">
                     </form>
-                    <button type="submit" class="btn btn-primary mb-4" style="width: 100%;">Sign up</button>
-                    <div class="text-center mb-4">Already have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</a></div>
+
+                    <button type="submit" class="btn btn-primary mb-4 signUp" style="width: 100%;">Sign
+                        up</button>
+                    <div class="text-center mb-4">Already have an account? <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Log in</a></div>
                 </div>
             </div>
         </div>
@@ -130,27 +152,28 @@
     <section class="py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5">
-                <div class="col-md-6"><img class="card-img-top itemDisplay mb-5 mb-md-0" id="productImg" src="" alt="..." /></div>
+                <div class="col-md-6 "><img class="card-img-top itemDisplay mb-5 mb-md-0" id="productImg" src="" alt="..." /></div>
                 <div class="col-md-6">
                     <div class="small mb-1">Electronics</div>
                     <h1 class="display-5 fw-bolder" id="productName"></h1>
                     <div class="fs-4 my-4">
                         <span class="itemPrice" id="productPrice"></span>
                     </div>
-                    <button id="buyNowButton" class="button-buy-now">Buy now</button>
+                    <button id="buyNowButton" class="button-buy-now buyNow">Buy now</button>
+                    <button id="AddCart" class="button-buy-now AddCart">Add Cart</button>
                     <div class="my-4">
                         <h3 class="text-uppercase">product description</h3>
                         <hr>
-                        <p class="mt-4 mb-5">
-                            Incase 13" Macbook Air Sleeve (Colour: Slate)
+                        <p class="mt-4 mb-5 productDescription" >
+                            <!-- Incase 13" Macbook Air Sleeve (Colour: Slate) -->
                         </p>
                     </div>
                     
-                    <div class="card text-center profile-card">
+                    <!-- <div class="card text-center profile-card">
                         <div class="card-body">
                             <img class="card-img-top mb-3" src="img/profile-img.jpg" alt="..." />
                             <h5 class="card-title">Kevin Anderson</h5>
-                            <!-- Seller reviews-->
+                         
                             <div class="card-text d-flex justify-content-center small text-warning mb-2">
                                 5.0&nbsp;
                                 <div class="bi-star-fill"></div>
@@ -162,7 +185,7 @@
 
                             <a href="#" class="btn btn-danger" style="width: 30%;" data-bs-toggle="modal" data-bs-target="#loginModal">Chat</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -171,105 +194,27 @@
     <section class="py-5 bg-light">
         <div class="container px-4 px-lg-5 mt-5">
             <h2 class="fw-bolder mb-4">Recent Added</h2>
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center itemCommodity">
+                <!-- <div class="col mb-5">
                     <div class="card h-100">
-                        <!-- Product image-->
+                       
                         <img class="card-img-top" src="img/img1.jpg" alt="..." />
-                        <!-- Product details-->
+                      
                         <div class="card-body p-4">
                             <div class="text-center">
-                                <!-- Product name-->
+                                
                                 <h5 class="fw-bolder">Fancy Product</h5>
-                                <!-- Product price-->
+                                
                                 $40.00 - $80.00
                             </div>
                         </div>
-                        <!-- Product actions-->
+                      
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html">View options</a></div>
                         </div>
                     </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img2.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Special Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span>
-                                $18.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"href="item.html">View options</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img3.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Sale Item</h5>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span>
-                                $25.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"href="item.html">View options</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="img/img4.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                $40.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"href="item.html">View options</a></div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
+              
             </div>
         </div>
     </section>
@@ -285,27 +230,29 @@
 <script src="assets/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="assets/swiper/swiper-bundle.js"></script>
 <!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/jquery-3.6.0.min.js"></script>
 <!-- Own JS-->
 <script src="js/scripts.js"></script>
+
+<script src="js/item.js"></script>
 <!-- Product JS -->
-<script src="js/item1.js"></script>
+<!-- <script src="js/product.js"></script> -->
 
 <script>
-$(document).ready(function(){
+// $(document).ready(function(){
     // 解析URL参数
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
+    // var queryString = window.location.search;
+    // var urlParams = new URLSearchParams(queryString);
     
     // // 获取产品数据
-    var productName = urlParams.get("name");
-    var productImg = urlParams.get("img");
-    var productPrice = urlParams.get("price");
+    // var productName = urlParams.get("name");
+    // var productImg = urlParams.get("img");
+    // var productPrice = urlParams.get("price");
     // // 显示产品数据
-    $("#productName").text(productName);
-    $("#productImg").attr("src", productImg);
-    $("#productPrice").text(productPrice);
-});
+    // $("#productName").text(productName);
+    // $("#productImg").attr("src", productImg);
+    // $("#productPrice").text(productPrice);
+// });
 
 </script>
 </html>
