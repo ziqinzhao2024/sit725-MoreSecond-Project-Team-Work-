@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 module.exports = (db) => {
-  const OrderController = require('../controllers/orderController')(db);
+  const orderController = require('../controllers/orderController')(db);
   
   router.post('/', orderController.createOrder);
   router.put('/:id', orderController.updateOrder);
