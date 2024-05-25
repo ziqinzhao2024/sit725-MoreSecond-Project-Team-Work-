@@ -2,7 +2,7 @@ const chai = require('chai');
 const chaiHttp = require("chai-http");
 chai.use(chaiHttp);
 chai.should()
-var apiUrl = 'http://localhost:8080';
+var apiUrl = 'http://localhost:9999';
 var assert = require('assert');
 const {expect} = require("chai");
 //引入了Node.js內置的assert模塊，用於在測試中斷言（assert）預期的行為

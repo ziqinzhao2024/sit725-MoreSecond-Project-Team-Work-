@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let url = "http://localhost:8080"
+    let url = "http://localhost:9999"
     function fetchFun(url, method, data) {
         if (data == "") {
             return new Promise((resolve, reject) => {
@@ -108,7 +108,7 @@ $(document).ready(function () {
         getCategory(res.category)
 
 
-        $('#productImg').attr('src', `http://localhost:8080/img/${res.pic}`);
+        $('#productImg').attr('src', `http://localhost:9999/img/${res.pic}`);
 
 
         $(".productDescription").append(`
@@ -144,7 +144,7 @@ $(document).ready(function () {
                         <!-- Sale badge-->
                         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="http://localhost:8080/img/${item.pic}" alt="..." />
+                        <img class="card-img-top" src="http://localhost:9999/img/${item.pic}" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">

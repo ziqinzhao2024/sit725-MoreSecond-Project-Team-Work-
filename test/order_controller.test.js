@@ -2,7 +2,7 @@ const chai =require('chai');
 const chaiHttp = require("chai-http");
 chai.use(chaiHttp);
 chai.should()
-var apiUrl = 'http://localhost:8080';
+var apiUrl = 'http://localhost:9999';
 var assert = require('assert');
 const {expect} = require("chai");
 describe("order_contoller_test", function () {
