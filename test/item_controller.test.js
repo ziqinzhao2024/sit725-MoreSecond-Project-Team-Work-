@@ -240,6 +240,7 @@ describe("deleteItem", function () {
         });
         beforeEach(function () {
             // 在每個測試用例運行之前執行的代碼
+            
             console.log("-------before each test---------");
         })
         it("delete item by id successfully", function () {
