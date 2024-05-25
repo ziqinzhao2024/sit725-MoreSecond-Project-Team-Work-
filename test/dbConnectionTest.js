@@ -26,6 +26,7 @@ run().catch(console.dir);
 //執行函數 run
 //这段代码的整体流程如下：
 
+
 //引入 MongoDB Node.js 驱动程序。
 //定义 MongoDB 连接字符串并创建客户端。
 //定义异步函数 run，在该函数中连接到数据库并查询集合中的文档。
@@ -37,3 +38,4 @@ run().catch(console.dir);
 //Define an asynchronous function run that connects to the database and queries a collection for documents.
 //Ensure the database connection is closed after the operation is completed.
 //Execute the run function and handle any potential errors.
+
