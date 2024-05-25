@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let url = "http://120.76.228.121:8080"
+    let url = "http://localhost:8080"
     function fetchFun(url, method, data) {
         if (data == "") {
             return new Promise((resolve, reject) => {
@@ -96,7 +96,7 @@ $(document).ready(function () {
     var urlParams = new URLSearchParams(queryString);
     var id = urlParams.get("id");
 
-    //获取产品的详细信息
+    //Get product detailed info
 
     let itemInfo = {}
 
@@ -108,7 +108,7 @@ $(document).ready(function () {
         getCategory(res.category)
 
 
-        $('#productImg').attr('src', `http://120.76.228.121:8080/img/${res.pic}`);
+        $('#productImg').attr('src', `http://localhost:8080/img/${res.pic}`);
 
 
         $(".productDescription").append(`
@@ -127,11 +127,11 @@ $(document).ready(function () {
 
 
 
-    //查看同款商品
+    //Check similar items
     function getCategory(category) {
 
         fetchFun(url + "/api/items/category/" + category, "GET", "").then(res => {
-            console.log("商品", res)
+            console.log("Product", res)
 
             let arr = res
             let str = ""
@@ -144,7 +144,7 @@ $(document).ready(function () {
                         <!-- Sale badge-->
                         <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="http://120.76.228.121:8080/img/${item.pic}" alt="..." />
+                        <img class="card-img-top" src="http://localhost:8080/img/${item.pic}" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -178,7 +178,7 @@ $(document).ready(function () {
     }
 
 
-    //创建订单
+    //Create order
 
 
 

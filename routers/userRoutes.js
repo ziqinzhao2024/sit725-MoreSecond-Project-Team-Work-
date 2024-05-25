@@ -9,6 +9,7 @@ module.exports = (db) => {
   router.get('/:id', userController.getUserById);
   router.put('/:id', userController.updateUser);
   router.delete('/:id', userController.deleteUser);
+  router.delete('/test/deleteUser', userController.deleteUserByEmail);
 
   return router;
 };
