@@ -215,3 +215,24 @@ $(document).ready(function () {
 
 
 })
+//Use the $(document).ready() function to ensure that the document (DOM) is fully loaded before executing code.
+
+//Defines a fetchFun() function for sending HTTP requests. The function uses a Promise object to ensure that asynchronous operations are handled.
+
+//Reads user information from local storage, prompts the user to log in if it does not exist, and returns to the previous page.
+
+//Parses user information and populates forms and elements with it.
+
+//Listen to the click event of the Update button to get the updated user information and send a PUT request to update the user information in the database.
+
+//Listen to the Logout button's click event, clear the user information from local storage, and reload the page.
+
+//Send a GET request using the fetchFun() function to retrieve the user's order information and populate the HTML form for display.
+
+//All in all, this code implements getting user information and order information from the back-end and displaying it on the front-end, 
+//as well as providing user information updating and logout functionality.
+
+
+
+
+

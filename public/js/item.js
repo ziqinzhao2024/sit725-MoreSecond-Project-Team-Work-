@@ -243,3 +243,20 @@ $(document).ready(function () {
     })
 
 })
+//First, it sets a variable url and initialises it to "http://localhost:9999", which is used for subsequent API requests.
+
+//Then, it defines a function called fetchFun, which is used to send the API request. It accepts three parameters: the requested URL, the requested method (GET, POST, etc.), 
+//and the requested data. Depending on whether the data is null or not, it sends different types of requests 
+//and returns a Promise object that can be used to asynchronously process the results of the request.
+
+//Next, a function called getUrlParam is defined that is used to retrieve the value of a specific parameter from the URL.
+
+//Then, the product ID is obtained by fetching the parameter from the URL.
+
+//After that, a GET request is sent to get the product details. Once the information is obtained, the product's image and description are displayed on the web page.
+
+//Next, another GET request is sent to get the information of similar products according to the product classification and displayed on the web page.
+
+//Finally, two event listeners are defined for clicking the "buyNow" button and "AddCart" button respectively. When "buyNow" button is clicked, 
+//the product is added to the shopping cart and the order is created;
+// when "AddCart" button is clicked, the product is added to the shopping cart.

@@ -63,3 +63,15 @@ $(document).ready(function () {
 
 
 })
+//This code is executed after the file is loaded. Firstly, it fetches the data called "addCartArr" from the local storage, 
+//which contains the information of the products added to the shopping cart by the user. Then, it parses these product information into a JavaScript array carList.
+
+//Next, the product information is converted into an HTML table through looping, where each row corresponds to a product, displaying the product name, actual price, quantity and amount. 
+//The resulting HTML string is stored in the variable str.
+
+//This form string is then inserted into the area where the shopping cart information is displayed.
+
+//When the user clicks the "proceedToCheckout" button, the code calculates the total price of all the items in the shopping cart and pops up a box showing the amount to be paid. 
+//When the payment is successful, it will pop up again and clear the shopping cart, and then reload the page.
+
+//This code implements the display of user-selected product information in the shopping cart and provides a simple payment function.

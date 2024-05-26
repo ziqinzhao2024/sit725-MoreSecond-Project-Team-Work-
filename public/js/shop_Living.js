@@ -135,3 +135,12 @@ $(document).ready(function () {
     }
 
 })
+//This code uses jQuery and runs when the document is ready. It defines a function called fetchFun, which is used to send an HTTP request to the specified URL, 
+//which can handle GET or POST requests and process the JSON data returned by the server.
+
+//Next, a function called getCommodity is defined to get a list of products in a specific category (in this case, "Living"). It sends a GET request to the server for a list of commodities of a specific category.
+
+//When the server returns the product data, it converts it into HTML elements, each wrapped in a Bootstrap card that displays the product's image, name, original price, and actual price. At the same time, a button is added for each product, 
+//which the user can click to view the product details.
+
+//Finally, the generated HTML element is added to the #itemCard element on the page to display the product list.

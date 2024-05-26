@@ -135,3 +135,15 @@ $(document).ready(function () {
     }
 
 })
+//Runs when the document is ready. It contains a function that essentially fetches a list of products of a particular category from the server and dynamically generates HTML elements to display them.
+
+//First, a function called fetchFun is defined to send an HTTP request to a specified URL. Depending on the method and data passed in, it can send either a GET or POST request and can process JSON data returned by the server.
+
+//Next, a function called getCommodity is defined to get a list of products of a specific category. It sends a GET request to the server for a list of commodities of a specific category (in this case "Electronics").
+
+//When the server returns the product data, it is converted into HTML elements, each wrapped in a Bootstrap card that displays the product's image, name, original price, and actual price. At the same time, a button is added for each product, 
+//which the user can click to view the product details.
+
+//Finally, the generated HTML element is added to the #itemCard element on the page to display the product list.
+
+//In summary, this code implements the function of retrieving a list of products of a specific category from the server and displaying it on the web page.

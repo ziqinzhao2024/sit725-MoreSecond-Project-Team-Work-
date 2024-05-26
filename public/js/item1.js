@@ -22,3 +22,14 @@ document.getElementById('buyNowButton').addEventListener('click', function () {
     // Redirect to the shopping cart page
     window.location.href = 'shopping_cart.html';
 });
+//When the click event occurs, it creates an object representing the product that 
+//contains various attributes of the product, such as id, name, colour, price, quantity, description and image path.
+
+//It then retrieves the existing cart data from the local storage 
+//and initialises an empty cart array if the cart data does not exist.
+
+//Then, it adds new product objects to the cart array.
+
+//Then, save the updated cart data back to the local storage.
+
+//Finally, redirect users to the cart page so that they can view the items in the cart.

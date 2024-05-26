@@ -8,7 +8,7 @@ $(document).ready(function () {
                 console.log(url, method, data)
 
 
-
+//Front-end use ajax fetch API to call the back-end interface (前端使用ajax中的fetch API调用后台的接口)
                 fetch(url, {
                     method: method,
                     headers: {
@@ -30,7 +30,7 @@ $(document).ready(function () {
                             })
                         }
                         // throw new Error('Network response was not ok.');
-                    })
+                    })//Front-end use ajax fetch API to call the back-end interface (前端使用ajax中的fetch API调用后台的接口)
                 // .then(jsonResponse => {
                 //     console.log('JSON response:', jsonResponse);
                 //     alert(jsonResponse.message)
@@ -122,12 +122,6 @@ $(document).ready(function () {
         },
     });
 
-
-
-
-
-
-
     //signUp
     $(".signUp").click(function () {
 
@@ -208,6 +202,52 @@ $(document).ready(function () {
 
     });
 
+    $("#index_searchInput").click(function (){
+        let data = {
+            "page_size": 9999999,
+            "page_no": 1
+        }
+        let condition =$("#searchInput").val();
+
+        fetchFun(url + "/api/items?page_no=1&page_size=99999&condition="+condition, "GET", "").then(res => {
+            console.log("商品", res)
+
+            let arr = res
+            let str = ""
+            for (let i = 0; i < arr.length; i++) {
+                let item = arr[i];
+                str += `
+                
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="http://localhost:9999/img/${item.pic}" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">${item.item_name}</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$${item.original_price}</span>
+                                $${item.actual_price}
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="item.html?id=${item._id}">View
+                                    options</a></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                `
+            }
+            $(".commodity").empty();
+
+            $(".commodity").append(str)
+        })
+    });
 
     function init() {
 
@@ -233,8 +273,9 @@ $(document).ready(function () {
             "page_size": 9999999,
             "page_no": 1
         }
+        let condition =$("#searchInput").val();
 
-        fetchFun(url + "/api/items?page_no=1&page_size=99999", "GET", "").then(res => {
+        fetchFun(url + "/api/items?page_no=1&page_size=99999&condition="+condition, "GET", "").then(res => {
             console.log("商品", res)
 
             let arr = res
@@ -277,10 +318,6 @@ $(document).ready(function () {
 
 
     getUrlParam()
-
-
-
-
 
     // User validation
     // get login status and update navigation bar buttons

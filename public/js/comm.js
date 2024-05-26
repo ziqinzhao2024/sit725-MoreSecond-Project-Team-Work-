@@ -99,3 +99,13 @@ $(document).ready(function () {
 
 
 })
+//Defines a fetchFun() function for sending HTTP requests. 
+//If no request data is provided (data is an empty string), a GET request is sent, otherwise a POST or PUT request with JSON data is sent. 
+//The function returns a Promise object to handle asynchronous operations.
+
+//A getUrlParam() function is defined to retrieve the value of a query parameter from a URL. 
+//It takes a parameter name and returns the corresponding parameter value.
+
+//Get the value of the query parameter named "id" from the URL and assign it to the variable id.
+
+//In general, this code is mainly used to send HTTP requests and process URL query parameters to achieve data interaction with the backend and manipulate the corresponding resources.
