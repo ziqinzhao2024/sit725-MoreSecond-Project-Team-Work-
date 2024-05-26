@@ -4,9 +4,24 @@ module.exports = {
     existItem: async (db,item_name, category, size) => {
         return await db.collection('Item').findOne({item_name:item_name, category:category, size:size});
     },
-    getAllItems: async (db,page_no,page_size) => {
+    getAllItems: async (db,condition,page_no,page_size) => {
+        if (!condition || condition ===''){
+            return await db.collection('Item')
+                .find()
+                .limit(parseInt(page_size))
+                .skip((page_no - 1) * page_size)
+                .toArray();
+        }
+
+        var reg = new RegExp(".*"+condition+".*$");
+        var _filter = {
+            $or: [
+                {'item_name': {$regex: reg}},
+                {'category': {$regex: reg}}
+            ]
+        }
       return await db.collection('Item')
-          .find()
+          .find(_filter)
           .limit(parseInt(page_size))
           .skip((page_no - 1) * page_size)
           .toArray();

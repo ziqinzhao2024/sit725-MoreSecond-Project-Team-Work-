@@ -37,6 +37,7 @@ module.exports = (db) => {
     getAllItems: async (req, res) => {
       let page_no = req.query.page_no;
       let page_size = req.query.page_size;
+      let condition = req.query.condition;
       if (!page_no || page_no < 1){
         page_no =1;
       }
@@ -44,7 +45,7 @@ module.exports = (db) => {
         page_size =10;
       }
       try {
-        const items = await itemModel.getAllItems(db,page_no,page_size);
+        const items = await itemModel.getAllItems(db,condition,page_no,page_size);
         res.json(items);
       } catch (error) {
         res.status(500).json({ message: error.message });
